@@ -5,8 +5,8 @@ import { Outlet } from "react-router-dom";
 
 const App = () => {
     return (
-        <div className="bg-gray-100">
-            <div >
+        <div >
+            <div className="bg-gray-100">
                 <Navbar></Navbar>
             </div>
             <Outlet></Outlet>

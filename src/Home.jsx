@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router-dom";
 import Navbanner from "./Navbanner";
-import JobSection from "./Section/JobSection";
+import JobSection from "./LandingPage/JobSection";
 
 const Home = () => {
     return (
@@ -11,6 +11,7 @@ const Home = () => {
                 <Navbanner></Navbanner>
             </div>
             <JobSection></JobSection>
+            
         </div>
     );
 };
