@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FeaturedJobs = ({ job }) => {
     const { job_Title, company, location, salary, job_id, jobType, logo } = job;
@@ -17,7 +18,7 @@ const FeaturedJobs = ({ job }) => {
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="w-6 h-6"
+                    className="w-6 h-6"
                 >
                     <path
                         stroke-linecap="round"
@@ -38,7 +39,7 @@ const FeaturedJobs = ({ job }) => {
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="w-6 h-6"
+                    className="w-6 h-6"
                 >
                     <path
                         stroke-linecap="round"
@@ -49,7 +50,8 @@ const FeaturedJobs = ({ job }) => {
 
                 <p> Salary: {salary}</p>
             </div>
-            <button className="btn-primary mt-6">View Details</button>
+            <Link to={`../job/${job_id}`}> <button className="btn-primary mt-10"> View Details</button></Link>
+            
         </div>
     );
 };
