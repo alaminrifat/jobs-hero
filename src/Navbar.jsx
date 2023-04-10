@@ -13,6 +13,16 @@ const Navbar = () => {
             <ul className="flex items-center space-x-8 text-gray-700 text-sm">
                 <li>
                     <NavLink
+                        to="/"
+                        className={({ isActive }) =>
+                            isActive ? "active" : "default"
+                        }
+                    >
+                        Home
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
                         to="/statistics"
                         className={({ isActive }) =>
                             isActive ? "active" : "default"

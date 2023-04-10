@@ -9,17 +9,18 @@ const FeaturedJobSection = () => {
     useEffect(()=>{
         fetch('Jobs.json')
         .then(res => res.json())
-        .then(data => setJobs(data)
-        )
+        .then(data => setJobs(data))
     },[])
+
     useEffect(()=>{
         setShowless(jobs.slice(0,4));
-    },[])
+    },[jobs])
 
     const [status, setStatus] = useState(false);
     const toggleStatus = () => {
         setStatus(!status);
     }
+    
     return (
         <div className='flex flex-col items-center justify-center'>
             <div className="mt-28 text-center">
@@ -29,10 +30,11 @@ const FeaturedJobSection = () => {
             <div className='mt-28 grid grid-cols-2 container mx-auto gap-6'>
                 { 
                    status? jobs.map(job => <FeaturedJobs key={job.job_id} job={job}></FeaturedJobs>) : showless.map(sl => <FeaturedJobs key={sl.job_id} job={sl}></FeaturedJobs>)
-                    
                 }
             </div>
-            <button onClick={toggleStatus} className='btn items-center mt-10'>See All jobs</button>
+            <button onClick={toggleStatus} className='btn items-center mt-10'>
+                See All jobs
+            </button>
         </div>
     );
 };
