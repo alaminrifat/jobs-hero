@@ -12,7 +12,8 @@
         "phone": "123-456-7890",
         "email": "hr@abctech.com",
         "address": "123 Main Street, San Francisco, CA",
-        "jobType": "Full-time",
+        "jobType": "Onsite",
+        "jobTime":"Part Time",
         "logo":"https://i.ibb.co/4VsRx0P/google-1-1-1.png"
     },
     {
@@ -29,6 +30,7 @@
         "email": "hr@xyzcorp.com",
         "address": "456 Park Avenue, New York, NY",
         "jobType": "Remote",
+        "jobTime":"Full Time",
         "logo":"https://i.ibb.co/sJtwt9K/airbnb.png"
     },
     {
@@ -44,7 +46,8 @@
         "phone": "888-555-1234",
         "email": "hr@lmnaccounting.com",
         "address": "789 Main Street, Los Angeles, CA",
-        "jobType": "Full-time",
+        "jobType": "Onsite",
+        "jobTime":"Part Time",
         "logo":"https://i.ibb.co/GRBCTvc/netflix-4-1.png"
     },
     {
@@ -60,7 +63,8 @@
         "phone": "713-555-1212",
         "email": "hr@lmnretail.com",
         "address": "9876 Main Street, Houston, TX",
-        "jobType": "Full-time",
+        "jobType": "Onsite",
+        "jobTime":"Full Time",
         "logo":"https://i.ibb.co/0BJdFR9/tesla-9-1.png"
     },
     {
@@ -76,7 +80,8 @@
         "phone": "617-555-8888",
         "email": "hr@abccorp.com",
         "address": "345 Main Street, Boston, MA",
-        "jobType": "Full-time",
+        "jobType": "Onsite",
+        "jobTime":"Part Time",
         "logo":"https://i.ibb.co/GRBCTvc/netflix-4-1.png"
     },
     {
@@ -93,6 +98,7 @@
         "email": "hr@xyztech.com",
         "address": "1234 Market Street, San Francisco, CA",
         "jobType": "Remote",
+        "jobTime":"Full Time",
         "logo":"https://i.ibb.co/4VsRx0P/google-1-1-1.png"
     }
 ]

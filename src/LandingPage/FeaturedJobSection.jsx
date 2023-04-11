@@ -27,7 +27,7 @@ const FeaturedJobSection = () => {
                 <h1 className="font-semibold text-3xl">Featured Jobs</h1>
                 <p className="text-gray-500 mt-2">Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
-            <div className='mt-28 grid grid-cols-2 container mx-auto gap-6'>
+            <div className='mt-28 grid grid-cols-1 w-11/12 md:grid-cols-2  md:w-full container mx-auto gap-6'>
                 { 
                    status? jobs.map(job => <FeaturedJobs key={job.job_id} job={job}></FeaturedJobs>) : showless.map(sl => <FeaturedJobs key={sl.job_id} job={sl}></FeaturedJobs>)
                 }

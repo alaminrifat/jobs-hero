@@ -10,7 +10,7 @@ const Navbar = () => {
                 </Link>
             </div>
             {/* navigation links */}
-            <ul className="flex items-center space-x-8 text-gray-700 text-sm">
+            <ul className="hidden md:flex items-center space-x-8 text-gray-700 text-sm">
                 <li>
                     <NavLink
                         to="/"
@@ -54,7 +54,7 @@ const Navbar = () => {
             </ul>
             {/* buttons */}
             <div>
-                <button className="btn-primary">Star Applying</button>
+                <button className="btn-primary">Start Applying</button>
             </div>
         </div>
     );

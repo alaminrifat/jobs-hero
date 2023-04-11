@@ -2,15 +2,29 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const FeaturedJobs = ({ job }) => {
-    const { job_Title, company, location, salary, job_id, jobType, logo } = job;
+    const {
+        job_Title,
+        company,
+        location,
+        salary,
+        job_id,
+        jobType,
+        logo,
+        jobTime,
+    } = job;
     return (
         <div className=" p-6 border-solid border-2 static">
             <img className="w-24" src={logo} alt="" />
             <h1 className="text-2xl font-semibold mt-2">{job_Title}</h1>
             <p className="mt-2 text-gray-500">{company}</p>
-            <p className="border-solid border-2 border-purple-600 p-1 w-24 my-2 text-purple-600 font-semibold rounded-md text-center">
-                {jobType}
-            </p>
+            <div className="flex gap-4 mb-1">
+                <p className="border-solid border-2 mt-1 border-purple-600 w-24 text-purple-600 font-semibold rounded-md text-center">
+                    {jobType}
+                </p>
+                <p className="border-solid border-2 mt-1 border-purple-600 w-24 text-purple-600 font-semibold rounded-md text-center">
+                    {jobTime}
+                </p>
+            </div>
             <div className="flex gap-2 text-gray-600">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -50,8 +64,10 @@ const FeaturedJobs = ({ job }) => {
 
                 <p> Salary: {salary}</p>
             </div>
-            <Link to={`../job/${job_id}`}> <button className="btn-primary mt-10"> View Details</button></Link>
-            
+            <Link to={`../job/${job_id}`}>
+                {" "}
+                <button className="btn-primary mt-5"> View Details</button>
+            </Link>
         </div>
     );
 };
