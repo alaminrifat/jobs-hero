@@ -13,7 +13,7 @@ const Navbanner = () => {
                 <button className="btn-primary w-2/5">Get Started</button>
             </div>
             <div>
-                <img src="/src/assets/All Images/P3OLGJ1 copy 1.png" alt="" />
+                <img src="https://i.ibb.co/VtSwtct/P3-OLGJ1-copy-1.png" alt="" />
             </div>
         </div>
     );
