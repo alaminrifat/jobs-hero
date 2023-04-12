@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import JobdetailsHeader from "./JobdetailsHeader";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const JobDetails = () => {
     const jobs = useLoaderData();
@@ -13,6 +15,12 @@ const JobDetails = () => {
         setJob(jobData);
     }, []);
 
+    const showToastMessage = () => {
+        toast.success('Success Notification !', {
+            position: toast.POSITION.TOP_RIGHT
+        });
+    };
+
     const applyJob = (jobId) => {
         // Check if the jobs array already exists in localStorage
         let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
@@ -20,16 +28,19 @@ const JobDetails = () => {
         //TODO: toaster
         if (jobs.some((job) => job.id === jobId)){
             alert('Already Applied');
+        //    showToastMessage();
         }
         // Check if the jobId already exists in the jobs array
         if (!jobs.some((job) => job.id === jobId)) {
             // If the jobId does not exist in the jobs array, add it
             jobs.push({ id: jobId });
-            alert(' Applied');
+            alert('Successfully Applied');
+            // showToastMessage();
             // Store the updated jobs array in localStorage
             localStorage.setItem("jobs", JSON.stringify(jobs));
         }
     };
+    
     return (
         <div>
             <JobdetailsHeader></JobdetailsHeader>
