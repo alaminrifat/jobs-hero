@@ -22,46 +22,12 @@ const AppliedJobsload = () => {
         setJobs(matchedJobs);
         console.log(jobs);
     }, [webJobs]);
-
-    /*
-     *
-     */
-    // const sortDataByType = (type) => {
-    //     const sortedData = jobs.sort((a, b) => {
-    //         if (type === "remote") {
-    //             return a.type.localeCompare(b.type);
-    //             console.log('b');
-    //         } else {
-    //             return b.type.localeCompare(a.type);
-    //             console.log('a');
-    //         }
-    //     });
-    //     setJobs(sortedData);
-    // };
-
-    const sortDataByType = (type) => {
-        const sortedData = jobs.sort((a, b) => {
-          if (!a.type || !b.type) {
-            return 0;
-            console.log('0');
-          }
-          if (type === "remote") {
-            return a.type.localeCompare(b.type);
-            console.log('5');
-          } else {
-            return b.type.localeCompare(a.type);
-            console.log('a');
-          }
-        });
-        setJobs(sortedData);
-      };
-      
     return (
         <div>
             <AppliedJobHeader></AppliedJobHeader>
             <div className="container mx-auto mt-10 flex justify-end gap-6">
-                <button className="btn-primary w-24" onClick={() => sortDataByType("onsite")}>Onsite</button>
-                <button className="btn-primary w-24" onClick={() => sortDataByType("remote")}>Remote</button>
+                <button className="btn-primary w-24" onClick={() => sortDataByType()}>Onsite</button>
+                <button className="btn-primary w-24" onClick={() => sortDataByType()}>Remote</button>
             </div>
             <div className="mt-10">
                 <div className="container mx-auto">

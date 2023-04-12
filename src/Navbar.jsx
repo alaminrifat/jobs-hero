@@ -3,14 +3,14 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div className="flex justify-around mx-auto items-center h-24">
+        <div className="flex flex-col md:flex-row justify-around mx-auto items-center h-32">
             <div>
                 <Link to='/'>
                     <p className="text-3xl font-bold">JobsHero</p>
                 </Link>
             </div>
             {/* navigation links */}
-            <ul className="hidden md:flex items-center space-x-8 text-gray-700 text-sm">
+            <ul className=" flex items-center space-x-8 text-gray-700 text-sm">
                 <li>
                     <NavLink
                         to="/"
@@ -56,6 +56,8 @@ const Navbar = () => {
             <div>
                 <button className="btn-primary">Start Applying</button>
             </div>
+
+        
         </div>
     );
 };
