@@ -1,7 +1,7 @@
 **JOBS-HERO**
 An Awsome place to start your carear.
 
-> Live site : http://jobs-hero-alaminrifat.surge.sh/
+> Live site : https://leafy-syrniki-b5533f.netlify.app/
 
 ## Features & Funcationalities
 1. It's a single-page React website for job hunters.
