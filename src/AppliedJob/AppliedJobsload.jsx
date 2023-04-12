@@ -22,20 +22,54 @@ const AppliedJobsload = () => {
         setJobs(matchedJobs);
         console.log(jobs);
     }, [webJobs]);
+
+    //
+    const [newData, setNewData] = useState(jobs);
+    const [onsitestatus, setOnsitestatus] = useState(false);
+    const [remotestatus, setRemotestatus] = useState(false);
+
+    const handleOnSite = () => {
+        setRemotestatus(false);
+        setOnsitestatus(true);
+        const updatedData = jobs.filter((item) => item.jobType === "Onsite");
+        setNewData(updatedData);
+    };
+
+    const handleRemote = () => {
+        setRemotestatus(true);
+        setOnsitestatus(false);
+        const updatedData = jobs.filter((item) => item.jobType === "Remote");
+        setNewData(updatedData);
+    };
+
     return (
         <div>
             <AppliedJobHeader></AppliedJobHeader>
             <div className="container mx-auto mt-10 flex justify-end gap-6">
-                <button className="btn-primary w-24" onClick={() => sortDataByType()}>Onsite</button>
-                <button className="btn-primary w-24" onClick={() => sortDataByType()}>Remote</button>
+                <button className="btn-primary w-24" onClick={handleOnSite}>
+                    Onsite
+                </button>
+                <button className="btn-primary w-24" onClick={handleRemote}>
+                    Remote
+                </button>
             </div>
             <div className="mt-10">
                 <div className="container mx-auto">
-                    {jobs.map((si) => (
-                        <AppliedJob job={si} key={si.job_id}></AppliedJob>
-                    ))}
+                    {
+                        onsitestatus ? 
+                        newData.map((si) => (
+                            <AppliedJob job={si} key={si.job_id}></AppliedJob>
+                        )) : remotestatus ? 
+                        newData.map((si) => (
+                            <AppliedJob job={si} key={si.job_id}></AppliedJob>
+                        )) :
+                        jobs.map((si) => (
+                            <AppliedJob job={si} key={si.job_id}></AppliedJob>
+                        ))
+                    }
                 </div>
             </div>
+            {console.log(newData)}
         </div>
     );
 };

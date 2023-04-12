@@ -13,6 +13,8 @@ import Blog from './Blog';
 import JobDetails from './JobDetails/JobDetails';
 import AppliedJobsload from './AppliedJob/AppliedJobsload';
 import ErrorPage from './ErrorPage';
+import test from './test';
+import Test from './test';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +48,9 @@ const router = createBrowserRouter([
   {
     path:'*',
     element:<ErrorPage></ErrorPage>
+  },{
+    path:'test',
+    element:<Test></Test>
   }
   
 ]);
